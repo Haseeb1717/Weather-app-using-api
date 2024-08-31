@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="weather-info">
+                <div class="autocomplete">
+                    <input id="city-input" class="autocomplete-input" type="text" placeholder="Search cities...">
+                    <div id="suggestions" class="autocomplete-items"></div>
+                </div>
+                <h1 id="city">City</h1>
+                <h2 id="temperature">25°C</h2>
+                <p id="description">Sunny</p>
+            </div>
+            <div class="weather-3d">
+                <div class="weather-icon" id="weather-icon"></div>
+            </div>
+        </div>
+    </div>
+<script src="weather.js"></script>
