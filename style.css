@@ -1,0 +1,119 @@
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+    background-image: url('backcloud.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+        }
+
+        .container {
+            perspective: 1500px;
+        }
+
+        .card {
+            width: 500px;
+            height: 500px;
+            background: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+            transition: transform 0.5s;
+            position: relative;
+       
+        }
+
+        .card:hover {
+            transform: rotateX(10deg) rotateY(10deg);
+        }
+
+        .weather-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #city {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #temperature {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+
+        #description {
+            font-size: 18px;
+        }
+
+        .weather-3d {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            perspective: 1000px;
+        }
+
+        .weather-icon {
+            width: 100px;
+            height: 100px;
+            background: url('sunny-icon.png') no-repeat center center;
+            background-size: contain;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 0.5s;
+        }
+
+        .card:hover .weather-icon {
+            transform: rotateY(360deg);
+        }
+
+        /* Autocomplete Styles */
+        .autocomplete {
+            position: relative;
+            width: 100%;
+        }
+
+        .autocomplete-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #ddd;
+            border-top: none;
+            background: #fff;
+            z-index: 99;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        .autocomplete-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .autocomplete-item:hover {
+            background: #ddd;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .card {
+                width: 90vw;
+                height: auto;
+            }
+        }
